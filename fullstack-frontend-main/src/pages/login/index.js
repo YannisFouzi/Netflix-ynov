@@ -9,6 +9,7 @@ import authService from "../../services/auth.service";
 import { useRouter } from "next/router";
 import styles from "./index.module.scss";
 import LogoImg from "../../../public/FB-Logo.png";
+import Image from 'next/image'
 
 const Index = () => {
     const router = useRouter();
@@ -86,7 +87,7 @@ const Index = () => {
                     <div className={styles.onboarding}>
             <div>
             <div className={styles.icon}>
-            <img src={LogoImg.src} alt="Facebook"/>
+            <Image width="100%" height="100%" src={LogoImg.src} alt="Facebook"/>
               </div>
               <small>S&apos;identifier avec facebook</small>
             </div>

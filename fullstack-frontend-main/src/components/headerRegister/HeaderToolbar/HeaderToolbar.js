@@ -6,6 +6,7 @@ import LogoImg2 from "../../../../public/user2.png";
 import LogoImg3 from "../../../../public/user3.png";
 import styles from "./HeaderToolbar.module.scss";
 import CartContext from "../../../context/CartContext";
+import Image from 'next/image'
 
 const Headertoolbar = () => {
 
@@ -16,12 +17,12 @@ const Headertoolbar = () => {
 
           
                 <div className={styles.dropdown}>
-                <img className={styles.dropbtn} src={LogoImg.src} alt="account"/>
+                <Image width="100%" height="100%" className={styles.dropbtn} src={LogoImg.src} alt="account"/>
             
                 <div className={styles.dropdown_content}>
-    <a href="#"><img className={styles.dropbtn2}  src={LogoImg1.src} alt="account"/>Mehdi</a>
-    <a href="#"><img className={styles.dropbtn2}  src={LogoImg2.src} alt="account"/>Kuro Kami</a>
-    <a href="#"><img className={styles.dropbtn2}  src={LogoImg3.src} alt="account"/>Parent</a>
+    <a href="#"><Image width="100%" height="100%" className={styles.dropbtn2}  src={LogoImg1.src} alt="account"/>Mehdi</a>
+    <a href="#"><Image width="100%" height="100%" className={styles.dropbtn2}  src={LogoImg2.src} alt="account"/>Kuro Kami</a>
+    <a href="#"><Image width="100%" height="100%" className={styles.dropbtn2}  src={LogoImg3.src} alt="account"/>Parent</a>
     <a href="#">Gérer les profils</a>
     <Link href="/account/profil">
                 <a>

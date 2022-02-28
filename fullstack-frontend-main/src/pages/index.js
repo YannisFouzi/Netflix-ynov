@@ -10,7 +10,7 @@ import LogoImg from "../../public/tv.png";
 import LogoImgMobile from "../../public/mobile-0819.jpg";
 import LogoImgDevice from "../../public/device-pile.png";
 import LogoImgKids from "../../public/kids.png";
-
+import Image from 'next/image'
 
 
 
@@ -79,13 +79,13 @@ const Index = () => {
             </p>
         </div>
         <div className={styles.image}>
-        <img src={LogoImg.src} alt="tv"/>
+        <Image width="100%" height="100%" src={LogoImg.src} alt="tv"/>
         </div>
       </div>
       <div className={styles.container1}>
           
       <div className={styles.image}>
-      <img src={LogoImgMobile.src} alt="mobile"/>
+      <Image width="100%" height="100%" src={LogoImgMobile.src} alt="mobile"/>
           </div>
           <div className={styles.text}>
               <h1>Téléchargez vos séries préférées pour les regarder hors connexion.
@@ -109,7 +109,7 @@ const Index = () => {
                 </p>
             </div>
             <div className={styles.image}>
-            <img src={LogoImgDevice.src} alt="device"/>
+            <Image width="100%" height="100%" src={LogoImgDevice.src} alt="device"/>
             </div>
           </div>
 
@@ -117,7 +117,7 @@ const Index = () => {
           <div className={styles.container1}>
           
           <div className={styles.image}>
-          <img src={LogoImgKids.src} alt="kids"/>
+          <Image width="100%" height="100%" src={LogoImgKids.src} alt="kids"/>
               </div>
               <div className={styles.text}>
                   <h1>Créez des profils pour les enfants.

@@ -6,6 +6,7 @@ import LogoImg2 from "../../../../public/user2.png";
 import LogoImg3 from "../../../../public/user3.png";
 import styles from "./HeaderToolbar.module.scss";
 import CartContext from "../../../context/CartContext";
+import Image from 'next/image'
 
 const Headertoolbar = () => {
 
@@ -15,10 +16,11 @@ const Headertoolbar = () => {
         <div className={styles.header__toolbar}>
          <Link href="/search">
                 <a className={styles.cart}>
-                    <svg viewBox="0 0 512 512" width="24px" height="24px" aria-hidden="true" focusable="false" data-prefix="far" data-icon="shopping-bag" role="img" xmlns="http://www.w3.org/2000/svg" >			<path fill="white" d="M493.676,443.893L349.931,300.149c23.122-32.11,35.74-70.953,35.74-110.643C385.672,85.012,300.66,0,196.165,0
+                    <svg viewBox="0 0 512 512" width="24px" height="24px" aria-hidden="true" focusable="false" data-prefix="far" data-icon="shopping-bag" role="img" xmlns="http://www.w3.org/2000/svg" >			
+                    <path fill="white" d="M493.676,443.893L349.931,300.149c23.122-32.11,35.74-70.953,35.74-110.643C385.672,85.012,300.66,0,196.165,0
 			S6.659,85.012,6.659,189.506s85.012,189.507,189.507,189.507c33.349,0,65.797-8.715,94.494-25.293l146.593,146.594
 			c7.535,7.535,17.554,11.686,28.212,11.686s20.675-4.151,28.212-11.686C509.23,484.759,509.23,459.449,493.676,443.893z
-			 M474.869,481.507c-2.512,2.512-5.851,3.895-9.404,3.895c-3.552,0-6.893-1.383-9.404-3.895L302.037,327.483
+			M474.869,481.507c-2.512,2.512-5.851,3.895-9.404,3.895c-3.552,0-6.893-1.383-9.404-3.895L302.037,327.483
 			c-2.571-2.571-5.975-3.895-9.407-3.895c-2.524,0-5.064,0.717-7.296,2.184c-26.543,17.431-57.375,26.644-89.169,26.644
 			c-89.829,0-162.909-73.08-162.909-162.909s73.08-162.909,162.909-162.909s162.909,73.08,162.909,162.909
 			c0,37.585-13.166,74.285-37.071,103.34c-4.35,5.286-3.975,13.011,0.864,17.852l152,152
@@ -48,12 +50,12 @@ const Headertoolbar = () => {
             </Link>
           
                 <div className={styles.dropdown}>
-                <img className={styles.dropbtn} src={LogoImg.src} alt="account"/>
+                <Image width="100%" height="100%" className={styles.dropbtn} src={LogoImg.src} alt="account"/>
             
                 <div className={styles.dropdown_content}>
-    <a href="#"><img className={styles.dropbtn2}  src={LogoImg1.src} alt="account"/>Mehdi</a>
-    <a href="#"><img className={styles.dropbtn2}  src={LogoImg2.src} alt="account"/>Kuro Kami</a>
-    <a href="#"><img className={styles.dropbtn2}  src={LogoImg3.src} alt="account"/>Parent</a>
+    <a href="#"><Image width="100%" height="100%" className={styles.dropbtn2}  src={LogoImg1.src} alt="account"/>Mehdi</a>
+    <a href="#"><Image width="100%" height="100%" className={styles.dropbtn2}  src={LogoImg2.src} alt="account"/>Kuro Kami</a>
+    <a href="#"><Image width="100%" height="100%" className={styles.dropbtn2}  src={LogoImg3.src} alt="account"/>Parent</a>
     <a href="#">Gérer les profils</a>
 
     <Link href="/account/profil">

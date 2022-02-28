@@ -1,6 +1,6 @@
 export default {
     register(user) {
-        return fetch('http://localhost:3001/api/v1/users/register', {
+        return fetch(process.env.NEXT_PUBLIC_API_URLAPI_URL+'api/v1/users/register', {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -10,7 +10,7 @@ export default {
     }
     ,
     login(user) {
-        return fetch('http://localhost:3001/api/v1/users/login', {
+        return fetch(process.env.NEXT_PUBLIC_API_URLAPI_URL+'api/v1/users/login', {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -19,7 +19,7 @@ export default {
           }).then((res) => res.json())
     },
     getUser(token) {
-        return fetch('http://localhost:3001/api/v1/users/get-user', {
+        return fetch(process.env.NEXT_PUBLIC_API_URLAPI_URL+'api/v1/users/get-user', {
             headers: {
                 "authorization":token
             }
@@ -27,7 +27,7 @@ export default {
         .then(res => res.json())
     },
     updateUser(token, user) {
-        return fetch('http://localhost:3001/api/v1/users/update-user', {
+        return fetch(process.env.NEXT_PUBLIC_API_URLAPI_URL+'api/v1/users/update-user', {
             method: "PUT",
             headers: {
                 "authorization": token,
@@ -38,7 +38,7 @@ export default {
         .then(res => res.json())
     },
     verifyToken(token) {
-        return fetch('http://localhost:3001/api/v1/users/verifytoken', {
+        return fetch(process.env.NEXT_PUBLIC_API_URLAPI_URL+'api/v1/users/verifytoken', {
             headers: {
                 "authorization":token
             }
